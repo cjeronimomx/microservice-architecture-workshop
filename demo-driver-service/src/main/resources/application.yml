@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: demo-driver-service
+  banner:
+    charset: UTF-8
+    location: classpath:banner.txt
+
+server:
+  port: 4040
+  servlet:
+    context-path: /demo/api/v1
+    application-display-name: ${spring.application.name}
