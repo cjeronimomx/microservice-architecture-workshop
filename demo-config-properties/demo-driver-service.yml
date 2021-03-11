@@ -1,4 +1,6 @@
+---
 spring:
+  profiles: work
   datasource:
     url: jdbc:h2:mem:driverdb
     driverClassName: org.h2.Driver

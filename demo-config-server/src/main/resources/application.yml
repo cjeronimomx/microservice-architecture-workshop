@@ -12,9 +12,9 @@ spring:
       server:
         git:
           clone-on-start: true
-          timeout: 20
+          timeout: 10
           uri: https://github.com/cjeronimomx/microservice-architecture-workshop.git
-          search-paths: demo-config-properties
+          searchPaths: demo-config-properties
           username: ${GIT_USER}
           password: ${GIT_PASSWD}
   security:
