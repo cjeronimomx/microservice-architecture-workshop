@@ -1,1 +1,31 @@
-#TODO: 2. Modify this extension file for .yml
+#TODO: 2.1 Modify this extension file for .yml
+#TODO: 2.2 Add properties here for config-server
+spring:
+  application:
+    name: demo-config-server
+  banner:
+    charset: UTF-8
+    location: classpath:banner.txt
+
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+          timeout: 20
+          uri: https://github.com/cjeronimomx/microservice-architecture-workshop.git
+          search-paths: demo-config-properties
+          username: ${GIT_USER}
+          password: ${GIT_PASSWD}
+  security:
+    user:
+      name: config
+      password: Secret
+
+server:
+  port: 4050
+  servlet:
+    context-path: /demo/config
+    application-display-name: ${spring.application.name}
+
+
