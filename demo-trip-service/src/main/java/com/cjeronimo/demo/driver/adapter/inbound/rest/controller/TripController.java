@@ -12,14 +12,16 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.Optional;
 
+
+//TODO: 0.2 Rename class for TripController
 @RestController
-@RequestMapping("/trips")
-public class DriverController {
+@RequestMapping("/api/v1/trips")
+public class TripController {
     private ITripService tripService;
 
 
     @Autowired
-    public DriverController(ITripService tripService) {
+    public TripController(ITripService tripService) {
         this.tripService = tripService;
     }
 
@@ -43,11 +45,6 @@ public class DriverController {
     @PostMapping(path = "/")
     public ResponseEntity<ResponseDTO<Long>> add(@RequestBody TripEntity trip) {
         long tripId = tripService.createTrip(trip);
-        if (tripId == 0) {
-            return ResponseEntity
-                    .status(HttpStatus.BAD_REQUEST)
-                    .body(ResponseDTO.nok(HttpStatus.BAD_REQUEST, "Trip already exists"));
-        }
         return ResponseEntity.created(
                 ServletUriComponentsBuilder
                         .fromCurrentRequest()

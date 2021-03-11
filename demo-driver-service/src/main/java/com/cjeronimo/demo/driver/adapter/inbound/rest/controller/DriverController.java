@@ -13,7 +13,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/drivers")
+@RequestMapping("/api/v1/drivers")
 public class DriverController {
     private IDriverService driverService;
 
@@ -43,11 +43,6 @@ public class DriverController {
     @PostMapping(path = "/")
     public ResponseEntity<ResponseDTO<Long>> add(@RequestBody DriverEntity driver) {
         long driverId = driverService.createDriver(driver);
-        if (driverId == 0) {
-            return ResponseEntity
-                    .status(HttpStatus.BAD_REQUEST)
-                    .body(ResponseDTO.nok(HttpStatus.BAD_REQUEST, "Driver already exists"));
-        }
         return ResponseEntity.created(
                 ServletUriComponentsBuilder
                         .fromCurrentRequest()

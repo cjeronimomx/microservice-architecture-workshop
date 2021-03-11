@@ -8,5 +8,6 @@ spring:
 server:
   port: 4042
   servlet:
-    context-path: /demo/api/v1
+    #TODO: 0.1 Change contest-path to /demo and put /api/v1 in TripController
+    context-path: /demo
     application-display-name: ${spring.application.name}

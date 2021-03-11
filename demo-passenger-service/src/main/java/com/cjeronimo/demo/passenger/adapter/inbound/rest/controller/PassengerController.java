@@ -13,7 +13,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/passengers")
+@RequestMapping("/api/v1/passengers")
 public class PassengerController {
     private IPassengerService passengerService;
 
@@ -43,11 +43,6 @@ public class PassengerController {
     @PostMapping(path = "/")
     public ResponseEntity<ResponseDTO<Long>> add(@RequestBody PassengerEntity passenger) {
         long passengerId = passengerService.createPassenger(passenger);
-        if (passengerId == 0) {
-            return ResponseEntity
-                    .status(HttpStatus.BAD_REQUEST)
-                    .body(ResponseDTO.nok(HttpStatus.BAD_REQUEST, "Passenger already exists"));
-        }
         return ResponseEntity.created(
                 ServletUriComponentsBuilder
                         .fromCurrentRequest()

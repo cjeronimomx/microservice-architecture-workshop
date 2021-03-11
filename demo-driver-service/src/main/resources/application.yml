@@ -8,5 +8,5 @@ spring:
 server:
   port: 4040
   servlet:
-    context-path: /demo/api/v1
+    context-path: /demo
     application-display-name: ${spring.application.name}

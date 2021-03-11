@@ -1,0 +1,23 @@
+#TODO: 3. Add application-work.yml
+#TODO: 4. Configure datasource connection and jpa properties
+spring:
+  datasource:
+    url: jdbc:h2:mem:passengerdb
+    driverClassName: org.h2.Driver
+    username: passenger
+    password: Secret
+    #TODO: 7.3 Import sql entity inserts
+    data: classpath:passengers.sql
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  #TODO: 5. Enable H2 console
+  h2:
+    console:
+      enabled: true
+  #TODO: 7.4 Validate in http://localhost:4041/demo/h2-console

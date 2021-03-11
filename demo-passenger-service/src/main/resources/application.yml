@@ -8,5 +8,6 @@ spring:
 server:
   port: 4041
   servlet:
-    context-path: /demo/api/v1
+    #TODO: 0. Change contest-path to /demo and put /api/v1 in PassengerController
+    context-path: /demo
     application-display-name: ${spring.application.name}
