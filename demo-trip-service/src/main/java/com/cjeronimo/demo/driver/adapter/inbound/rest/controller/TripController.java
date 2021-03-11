@@ -13,7 +13,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.util.Optional;
 
 
-//TODO: 0.2 Rename class for TripController
 @RestController
 @RequestMapping("/api/v1/trips")
 public class TripController {

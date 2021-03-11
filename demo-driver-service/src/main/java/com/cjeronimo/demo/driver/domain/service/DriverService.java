@@ -11,8 +11,6 @@ import java.util.Optional;
 
 @Service
 @CommonsLog
-//TODO: 9.1 Delete Driver's list and driver instance
-//TODO: 9.2 Implement repository calls for read and create methods
 public class DriverService implements  IDriverService{
     private DriverRepository driverRepository;
 

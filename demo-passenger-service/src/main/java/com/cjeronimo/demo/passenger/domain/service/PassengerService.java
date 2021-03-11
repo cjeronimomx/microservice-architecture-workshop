@@ -10,8 +10,6 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 
-//TODO: 9.1 Delete Passengers's list and driver instance
-//TODO: 9.2 Implement repository calls for read and create methods
 @Service
 @CommonsLog
 public class PassengerService implements IPassengerService {

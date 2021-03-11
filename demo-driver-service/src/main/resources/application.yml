@@ -1,3 +1,7 @@
+#TODO 0. Create the folder demo-config-properties into root git repository
+#TODO 1.1 Create demo-driver-service folder into demo-config-properties folder
+#TODO 1.2 Copy this application-work.yml file into demo-driver-service folder
+#TODO 1.3 Push git changes
 spring:
   application:
     name: demo-driver-service

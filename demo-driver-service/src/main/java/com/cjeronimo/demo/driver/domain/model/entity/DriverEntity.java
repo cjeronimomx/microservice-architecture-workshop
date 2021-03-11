@@ -6,8 +6,6 @@ import lombok.Data;
 import javax.persistence.*;
 
 
-//TODO: 6.3 Change Builder by default constructor
-//TODO: 6.4 Add JPA annotations
 @Data
 @Entity(name = "DRIVER")
 @Table(name = "DRIVER")
