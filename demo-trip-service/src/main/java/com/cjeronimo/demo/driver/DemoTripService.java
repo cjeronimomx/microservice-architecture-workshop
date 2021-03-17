@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-//TODO: 10. Run with work profile and test GET and POST API methods
+//TODO: 4. Run with work profile and test GET and POST API methods
 @SpringBootApplication
 public class DemoTripService {
 

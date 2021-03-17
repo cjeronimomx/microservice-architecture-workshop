@@ -1,5 +1,10 @@
-#TODO: 2.1 Modify this extension file for .yml
-#TODO: 2.2 Add properties here for config-server
+#TODO: 2. Modify this extension file for .yml
+#TODO: 3.1 Create demo-config-properties git repository
+#TODO: 3.2 Clone demo-config-properties repository and create one folder for each microservice
+#TODO: 3.3 Copy every application-work.yml files from each microservice into respective folder
+#TODO: 3.4 Push changes to demo-config-properties git repository
+#TODO: 4. Add properties here for config-server and git repository
+
 spring:
   application:
     name: demo-config-server
@@ -13,8 +18,9 @@ spring:
         git:
           clone-on-start: true
           timeout: 10
-          uri: https://github.com/cjeronimomx/microservice-architecture-workshop.git
-          searchPaths: demo-config-properties
+          uri: https://github.com/cjeronimomx/demo-config-properties.git
+          search-paths:
+            - '{application}'
           username: ${GIT_USER}
           password: ${GIT_PASSWD}
   security:

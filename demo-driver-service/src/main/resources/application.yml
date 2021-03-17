@@ -1,15 +1,22 @@
-#TODO 0. Create the folder demo-config-properties into root git repository
-#TODO 1.1 Create demo-driver-service folder into demo-config-properties folder
-#TODO 1.2 Copy this application-work.yml file into demo-driver-service folder
-#TODO 1.3 Push git changes
+#TODO: 0.1 Create new demo-config-server Spring project using config-server and security dependencies and put it into root git repository
+#TODO: 0.2 Follow demo-config-server project steps
 
-#TODO 2. Create new Spring project using config-server and security dependencies and put it into root git repository
+#TODO: 2. Delete application-work.yml file
+
 spring:
   application:
     name: demo-driver-service
   banner:
     charset: UTF-8
     location: classpath:banner.txt
+  #TODO: 3. Add properties for config-server configuration
+  config:
+    import: configserver:http://127.0.0.1:4050/demo/config
+  cloud:
+    config:
+      fail-fast: true
+      username: config
+      password: Secret
 
 server:
   port: 4040
