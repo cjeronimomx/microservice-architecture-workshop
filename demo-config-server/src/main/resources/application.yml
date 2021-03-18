@@ -22,7 +22,6 @@ spring:
       password: Secret
 
 server:
-  #TODO: 5. Test running many microservice instance and validate in the service discovery
   port: 4050
   servlet:
     context-path: /demo/config

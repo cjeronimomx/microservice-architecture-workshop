@@ -1,6 +1,3 @@
-#TODO: 0.2 Rename this file with application.yml name
-#TODO: 0.3 Add banner.txt file
-#TODO: 3.1 Add application properties configuration
 spring:
   application:
     name: demo-service-discovery
@@ -8,7 +5,6 @@ spring:
     charset: UTF-8
     location: classpath:banner.txt
 
-  #TODO: 3.2 Add properties for config-server configuration
   config:
     import: configserver:http://127.0.0.1:4050/demo/config
   cloud:
@@ -17,11 +13,8 @@ spring:
       username: config
       password: Secret
 
-#TODO: 3.3 Add properties for server configuration
 server:
   port: 4060
   servlet:
     context-path: /demo/discovery
     application-display-name: ${spring.application.name}
-
-#TODO: 4. Add service discovery properties configuration in config-properties repository

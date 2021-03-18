@@ -13,8 +13,8 @@ spring:
       password: Secret
 
 server:
-  #TODO: 5. Test running many microservice instance and validate in the service discovery
-  port: 4040
+  #TODO: 1. Set port number 0 to use random port and start up many microservice instances
+  port: 0
   servlet:
     context-path: /demo
     application-display-name: ${spring.application.name}
