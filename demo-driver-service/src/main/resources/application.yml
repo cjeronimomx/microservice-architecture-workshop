@@ -1,15 +1,9 @@
-#TODO: 0.1 Create new demo-config-server Spring project using config-server and security dependencies and put it into root git repository
-#TODO: 0.2 Follow demo-config-server project steps
-
-#TODO: 2. Delete application-work.yml file
-
 spring:
   application:
     name: demo-driver-service
   banner:
     charset: UTF-8
     location: classpath:banner.txt
-  #TODO: 3. Add properties for config-server configuration
   config:
     import: configserver:http://127.0.0.1:4050/demo/config
   cloud:
@@ -19,6 +13,7 @@ spring:
       password: Secret
 
 server:
+  #TODO: 5. Test running many microservice instance and validate in the service discovery
   port: 4040
   servlet:
     context-path: /demo

@@ -18,7 +18,6 @@ repositories {
 	mavenCentral()
 }
 
-//TODO: 1.0 Add Config spring cloud version
 ext {
 	set('springCloudVersion', "2020.0.1")
 }
@@ -28,13 +27,13 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
-	//TODO: 1.1 Add Config client dependency
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+	//TODO: 1. Add service discovery client dependency
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-//TODO: 1.2 Add Config spring cloud bom
 dependencyManagement {
 	imports {
 		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"

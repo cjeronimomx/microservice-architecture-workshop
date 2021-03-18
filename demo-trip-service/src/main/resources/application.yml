@@ -5,7 +5,6 @@ spring:
     charset: UTF-8
     location: classpath:banner.txt
 
-  #TODO: 3. Add properties for config-server configuration
   config:
     import: configserver:http://127.0.0.1:4050/demo/config
   cloud:
