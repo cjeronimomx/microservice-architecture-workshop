@@ -8,8 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-//TODO: 2.4 Create PassengerClient Interface and annotate with @FeignClient
-//TODO: 2.5 Implement REST GET method
+
+//TODO: Implement fallback for this REST Client
 @FeignClient(name = "DEMO-PASSENGER-SERVICE")  // DEMO-DRIVER-SERVICE is the name that the service discovery have been registered
 public interface PassengerClient {
     @GetMapping(path = "/demo/api/v1/passengers/{id}")

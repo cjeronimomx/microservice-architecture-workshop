@@ -18,7 +18,6 @@ public class TripEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private long id;
-    //TODO: 3.2 Avoid return these Ids in json response
     @JsonIgnore
     private long driverId;
     @JsonIgnore
@@ -39,7 +38,6 @@ public class TripEntity {
     private LocalDateTime requestedAt = LocalDateTime.now();
 
 
-    //TODO: 3.1 Add Driver and Passenger properties but avoid persist into DB
     @Transient
     private DriverVO driver;
     @Transient

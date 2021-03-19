@@ -26,5 +26,3 @@ server:
   servlet:
     context-path: /demo/config
     application-display-name: ${spring.application.name}
-
-

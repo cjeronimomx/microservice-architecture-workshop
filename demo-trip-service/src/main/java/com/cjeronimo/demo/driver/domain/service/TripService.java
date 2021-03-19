@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-//TODO: 4.1 Inject DriverClient and PassengerClient dependencies
 @Service
 @CommonsLog
 public class TripService implements ITripService {
@@ -32,7 +31,7 @@ public class TripService implements ITripService {
     @Override
     public Optional<TripEntity> readTrip(long tripId) {
         log.info("Get info for trip: " + tripId);
-        //TODO: 4.2 Implement logic for get driver and passenger info from its microservice
+
         Optional<TripEntity> trip = tripRepository.findById(tripId);
         if (trip.isPresent()) {
             TripEntity tripEntity = trip.get();
@@ -50,7 +49,6 @@ public class TripService implements ITripService {
     }
 
 
-    //TODO: Implement logic for this action using Feign and Load balancing
     @Override
     public long createTrip(TripEntity trip) {
         log.info("Create new trip: " + trip);

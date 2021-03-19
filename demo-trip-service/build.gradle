@@ -1,5 +1,6 @@
 plugins {
-	id 'org.springframework.boot' version '2.4.3'
+	//TODO: 0.1 Downgrade spring-boot version for Hystrix support
+	id 'org.springframework.boot' version '2.3.9.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
@@ -19,7 +20,7 @@ repositories {
 }
 
 ext {
-	set('springCloudVersion', "2020.0.1")
+	set('springCloudVersion', "Hoxton.SR10")
 }
 
 dependencies {
@@ -29,8 +30,12 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
-	//TODO: 1.1 Add feign dependency for REST clients
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+	//TODO: 1.1 Add Hystrix dependency for circuit breaker
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard'
+	//TODO: 1.2 Add Actuator dependency for metrics
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
