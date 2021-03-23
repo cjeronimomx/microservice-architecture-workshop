@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 
-//TODO: 1.1 Create API Gateway project
-//TODO: 2. Enable Self registration with @EnableDiscoveryClient annotation
+//TODO: 1.2 Add Sleuth dependency into driver, passenger and trip service
+//TODO: 1.3 Run all services and test trip using the API Gateway
 @SpringBootApplication
 @EnableDiscoveryClient
 public class DemoApiGateway {
