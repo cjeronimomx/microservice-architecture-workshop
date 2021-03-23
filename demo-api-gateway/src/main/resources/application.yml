@@ -1,0 +1,29 @@
+#TODO: 0.1 Rename this file with application.yml name
+#TODO: 0.2 Create banner.txt file
+#TODO: 4.1 Create application-work.yml file
+#TODO: 4.2 Implement API Gateway configuration for Work environment into application-work.yml file
+#TODO: 4.3 Cut application-work.yml file from here and move to demo-api-gateway folder into demo-properties-config repository and push changes to git repository
+
+#TODO: 3.1 Configure this project adding the following properties
+spring:
+  application:
+    name: demo-api-gateway
+  banner:
+    charset: UTF-8
+    location: classpath:banner.txt
+
+  config:
+    import: configserver:http://127.0.0.1:4050/demo/config
+  cloud:
+    config:
+      fail-fast: true
+      username: config
+      password: Secret
+
+server:
+  port: 4070
+  servlet:
+    context-path: /
+    #application-display-name: ${spring.application.name}
+
+

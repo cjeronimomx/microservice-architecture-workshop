@@ -1,4 +1,3 @@
-#TODO: 0.2 Rename application.yml with bootstrap.yml
 spring:
   application:
     name: demo-trip-service
@@ -9,7 +8,6 @@ spring:
   cloud:
     config:
       fail-fast: true
-      #TODO: 0.3 Add this server config properties
       uri: http://127.0.0.1:4050/demo/config
       username: config
       password: Secret
@@ -19,6 +17,4 @@ server:
   servlet:
     context-path: /demo
     application-display-name: ${spring.application.name}
-#TODO: 1.3 Enable propiertes for hystrix support in application-work.yml
-#TODO: 1.4 Set propiertes for actuator in application-work.yml
 

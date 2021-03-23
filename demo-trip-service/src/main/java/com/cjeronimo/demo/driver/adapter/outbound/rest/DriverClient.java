@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 
-//TODO: 3.3 Add fallback argurment with DriverHystrixFallback.class value
 @FeignClient(name = "DEMO-DRIVER-SERVICE", fallback = DriverHystrixFallback.class)  // DEMO-DRIVER-SERVICE is the name that the service discovery have been registered
 public interface DriverClient {
     @GetMapping(path = "/demo/api/v1/drivers/{id}")

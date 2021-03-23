@@ -7,9 +7,6 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-//TODO: 2. Enable Hystrix and Hystrix-dashbooard
-//TODO: 4. Restart this microservice and test shutdown driver-service or passenger-service
-//TODO: 5 Review Hystrix dashboard en http://127.0.0.1:4042/demo/hystrix URL and use http://127.0.0.1:4042/demo/actuator/hystrix.stream as Stream
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
