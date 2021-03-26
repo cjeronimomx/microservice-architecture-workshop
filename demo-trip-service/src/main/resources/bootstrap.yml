@@ -1,3 +1,4 @@
+#TODO: 4.2 Add properties into demo-trip-service/application-work.yml in demo-config-properties to customize actuator
 spring:
   application:
     name: demo-trip-service

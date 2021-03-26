@@ -1,6 +1,10 @@
+#TODO: 0.2 Rename this class with application.yml
+#TODO: 0.3 Add banner.txt file
+
+#TODO: 1. Configure properties for this metrics server and config server connection
 spring:
   application:
-    name: demo-api-gateway
+    name: demo-metrics-server
   banner:
     charset: UTF-8
     location: classpath:banner.txt
@@ -14,14 +18,8 @@ spring:
       password: Secret
 
 server:
-  port: 4070
+  port: 4080
   servlet:
     context-path: /
     application-display-name: ${spring.application.name}
-
-logging:
-  level:
-    root: DEBUG
-    com.demo.demo.gateway: DEBUG
-
 

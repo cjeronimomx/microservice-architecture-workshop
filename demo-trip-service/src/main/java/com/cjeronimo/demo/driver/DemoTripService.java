@@ -7,6 +7,10 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
+
+//TODO: 2. Add properties into config repository for actuator(demo-trip-service/application-work.yml)
+//TODO: 3. Run this service and validate with URL http://127.0.0.1:4042/demo/actuator
+//TODO: 5. Test Metrics server using http://127.0.0.1:4080/wallboard url
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
